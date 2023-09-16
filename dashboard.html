@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stylish Dashboard</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+  }
+
+  .dashboard {
+    background-color: #28b463;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .dropdown {
+    margin-top: 20px;
+  }
+
+  .window {
+    background-color: #ffffff;
+    color: #28b463;
+    border: 2px solid #28b463;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .profile-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #28b463;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+
+  .footer {
+    background-color: #ffffff;
+    border-top: 2px solid #28b463;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .footer .division {
+    flex: 1;
+  }
+</style>
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Hello, Where Are You Going?</h1>
+    <div class="options">
+        <label for="choices">What Are You Choosing Today?</label>
+        <select id="choices">
+            <option value="walking">Walking Group</option>
+            <option value="bike">Bike/Scooty Pooling</option>
+            <option value="car">Car Pooling</option>
+        </select>
+        <button id="create-post-button">Create Post</button>
+    </div>
+    <div class="window">
+      <h2 id="selected-ride">Selected Ride</h2>
+      <p id="no-rides">No rides available</p>
+    </div>
+  </div>
+  
+  <button class="profile-button">Profile View</button>
+  
+    <div class="footer">
+        <button>About Us</button>
+        <button>Terms and Conditions</button>
+        <button>Feedback</button>
+    </div>
+    
+  </div>
+
+  <script>
+    function updateWindow() {
+      const selectedOption = document.getElementById("ride-options").value;
+      const selectedRideElement = document.getElementById("selected-ride");
+      const noRidesElement = document.getElementById("no-rides");
+
+      selectedRideElement.textContent = `Selected Ride: ${selectedOption}`;
+      noRidesElement.style.display = "block";
+    }
+  </script>
+</body>
+</html>
