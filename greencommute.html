@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenCommute Buddy</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file here -->
+    <style>
+ body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    text-align: center;
+    background-color: #8fd5ad;
+    color: #fff;
+    padding: 100px 10px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+header a {
+    display: inline-block;
+    background-color: #fff;
+    color: #8fd5ad;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #8fd5ad;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* video title style
+.video-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    
+} */
+.options {
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+}
+.option {
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 0 20px;
+    color: #333;
+    transition: color 0.3s;
+} 
+
+.option:hover {
+    color: #2ecc71;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 50px 20px;
+}
+
+.features div {
+    text-align: center;
+    width: 300px;
+    height: 200px; 
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.features div:hover {
+    transform: translateY(-5px);
+}
+
+.features h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #2ecc71;
+}
+
+.features p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+</style>
+</head>
+<body>
+    <body>
+        <!-- Video Background -->
+        <div class="video-container">
+            <video autoplay muted loop id="video-bg">
+                <source src="carpooling-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+        </div>
+    
+        <!-- Scroll-triggered options -->
+        <!-- <div class="options">
+            <a href="#register" class="option">Register</a>
+            <a href="#login" class="option">Login</a>
+        </div> -->
+    </body>
+    
+    <header>
+        <h1>GreenCommute Buddy</h1>
+        <p>Find eco-friendly commuting options in your community</p>
+        <a href="signup.html">Get Started</a>
+    </header>
+
+    <section class="features">
+
+        <div>
+            <h2>Connect with the Community!</h2>
+            <p>be a part of a community committed to a greener future.</p>
+        </div>
+        <div>
+            <h2>Find Rides</h2>
+            <p>Discover available rides or groups based on your preferences and location.</p>
+        </div>
+        
+        
