@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Information</title>
+  <style>
+    .row {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+    }
+    .column {
+      flex: 50%;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column">Where are you going ??</div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <label for="from">From</label>
+    <select id="from">
+      <option value="srm_global">SRM Global</option>
+      <option value="clock_tower">Clock Tower</option>
+      <option value="airport">Airport</option>
+      <option value="potheri_railway_station">Potheri Railway Station</option>
+    </select>
+  </div>
+  <div class="column">
+    <label for="to">To</label>
+    <select id="to">
+      <option value="srm_global">SRM Global</option>
+      <option value="clock_tower">Clock Tower</option>
+      <option value="airport">Airport</option>
+      <option value="potheri_railway_station">Potheri Railway Station</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <label for="mode_of_transport">Mode of Transport</label>
+    <select id="mode_of_transport">
+      <option value="car">Car</option>
+      <option value="bike">Bike</option>
+      <option value="walking">Walking</option>
+    </select>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <label for="vehicle_number">Vehicle No.</label>
+    <input type="text" id="vehicle_number" disabled>
+    <span id="walking_icon" style="display: none;">🚶</span>
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    <label for="name">Name</label>
+    <input type="text" id="name">
+  </div>
+</div>
+
+<div class="row">
+  <button id="ok_button">OK</button>
+</div>
+
+<script>
+  document.getElementById('mode_of_transport').addEventListener('change', function() {
+    var vehicleNumberInput = document.getElementById('vehicle_number');
+    var walkingIcon = document.getElementById('walking_icon');
+
+    if (this.value === 'walking') {
+      vehicleNumberInput.disabled = true;
+      walkingIcon.style.display = 'inline-block';
+    } else {
+      vehicleNumberInput.disabled = false;
+      walkingIcon.style.display = 'none';
+    }
+  });
+</script>
+
+</body>
+</html>
+    
